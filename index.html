@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Misaki Japanese Academy | ミサキ日本語アカデミー — Your Gateway to Japan</title>
+  <meta name="description" content="Misaki Japanese Academy in Ambalangoda, Sri Lanka: Japanese language education and career preparation (JLPT, JFT-Basic, SSW). スリランカの日本語人材を日本企業へ。">
+  <meta property="og:title" content="Misaki Japanese Academy | ミサキ日本語アカデミー">
+  <meta property="og:description" content="Your Gateway to Japan. 日本への扉を、ここから。">
+  <meta property="og:image" content="assets/images/hero-collage.jpg">
+  <meta name="theme-color" content="#6f0808">
+  <link rel="icon" type="image/png" href="assets/images/logo-round.png">
+
+  <script>
+    // Pick the language before first paint: saved choice, else Japanese browsers get Japanese.
+    (function () {
+      var d = document.documentElement, saved = null;
+      try { saved = localStorage.getItem('misaki-lang'); } catch (e) {}
+      var lang = saved || ((navigator.language || '').toLowerCase().indexOf('ja') === 0 ? 'ja' : 'en');
+      d.setAttribute('data-lang', lang);
+      d.setAttribute('lang', lang);
+      d.classList.add('js');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=EB+Garamond:wght@500&family=Kaushan+Script&family=Lato:wght@400;700&family=Libre+Baskerville:wght@700&family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+  <!-- ============ LOADING SCREEN: shoji doors, rising sun, brushed enso ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__door loader__door--l"></div>
+    <div class="loader__door loader__door--r"></div>
+    <div class="loader__mark">
+      <div class="loader__disc">
+        <svg class="loader__enso" viewBox="0 0 200 200">
+          <path d="M150 38 C 108 8, 40 30, 28 92 C 16 156, 78 190, 130 172 C 178 156, 192 96, 164 60" pathLength="1"/>
+        </svg>
+        <span class="loader__sun"></span>
+        <i class="loader__petal loader__petal--1"></i>
+        <i class="loader__petal loader__petal--2"></i>
+        <i class="loader__petal loader__petal--3"></i>
+      </div>
+      <p class="loader__name">MISAKI</p>
+      <p class="loader__sub">JAPANESE ACADEMY</p>
+      <p class="loader__jp">ようこそ</p>
+    </div>
+  </div>
+
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Misaki Japanese Academy">
+        <img class="brand__logo" src="assets/images/logo-round.png" width="48" height="48" alt="">
+        <span class="brand__name">Misaki Japanese<br>Academy</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#top"><span class="en">Home</span><span class="ja">ホーム</span></a>
+        <a href="#about"><span class="en">About Us</span><span class="ja">学院について</span></a>
+        <a href="#mission"><span class="en">Vision &amp; Mission</span><span class="ja">展望と使命</span></a>
+        <a href="#courses"><span class="en">Courses</span><span class="ja">コース</span></a>
+        <a href="#services"><span class="en">Our Services</span><span class="ja">サービス</span></a>
+        <a href="#gallery"><span class="en">Gallery</span><span class="ja">ギャラリー</span></a>
+        <a href="#contact"><span class="en">Contact Us</span><span class="ja">お問い合わせ</span></a>
+      </nav>
+
+      <div class="header__tools">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" class="lang__btn" data-set-lang="en">EN</button>
+          <button type="button" class="lang__btn" data-set-lang="ja">JA</button>
+        </div>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <h1 class="hero__logo">
+        <span class="tlogo" role="img" aria-label="Misaki Japanese Academy">
+          <span class="tlogo__word">MI<span class="tlogo__sun">SA</span>KI</span>
+          <span class="tlogo__band">JAPANESE ACADEMY</span>
+        </span>
+      </h1>
+      <p class="hero__script">
+        <span class="en">Your Gateway to Japan</span>
+        <span class="ja">日本への扉を、ここから。</span>
+      </p>
+      <p class="hero__text en">Start your Japanese language journey with Misaki Japanese Academy. We provide quality Japanese language education, examination preparation, student guidance and career-oriented training to help students prepare for future opportunities in Japan.</p>
+      <p class="hero__text ja">ミサキ日本語アカデミーで、日本語の学びを始めましょう。質の高い日本語教育、試験対策、学習サポート、キャリアを見据えた指導で、日本での未来に備える学生を支えます。</p>
+      <p class="hero__tag">
+        <span class="en">Learn Japanese. Gain Confidence. Build Your Future.</span>
+        <span class="ja">日本語を学び、自信をつけ、未来をひらく。</span>
+      </p>
+      <div class="hero__btns">
+        <a href="#courses"><span class="en">Explore<br>Our Courses</span><span class="ja">コースを<br>見る</span></a>
+        <a href="#contact"><span class="en">Contact Us</span><span class="ja">お問い合わせ</span></a>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>JLPT N5</span><i></i><span>JLPT N4</span><i></i><span>JFT-Basic</span><i></i><span>特定技能 SSW</span><i></i><span>日本語会話</span><i></i><span>留学ビザ</span><i></i><span>技術ビザ</span><i></i><span>オンライン面接</span><i></i>
+        <span>JLPT N5</span><i></i><span>JLPT N4</span><i></i><span>JFT-Basic</span><i></i><span>特定技能 SSW</span><i></i><span>日本語会話</span><i></i><span>留学ビザ</span><i></i><span>技術ビザ</span><i></i><span>オンライン面接</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ TALENT ============ -->
+    <section class="section talent" id="talent">
+      <span class="wm" aria-hidden="true" data-parallax="0.1">人材</span>
+      <div class="container">
+        <header class="head" data-reveal>
+          <p class="kicker"><span class="kicker__no">01</span><span class="kicker__jp">人材</span><span class="kicker__en">Talent</span></p>
+          <h2 class="title">
+            <span class="en">The people we prepare for your workplace</span>
+            <span class="ja">御社にご紹介できる人材</span>
+          </h2>
+          <p class="sub en">Not only language ability, but the attitude that earns trust in a Japanese workplace. Our students build four strengths before they leave for Japan.</p>
+          <p class="sub ja">語学力だけでなく、日本の職場で信頼される姿勢まで。ミサキの学生は、次の四つの力を身につけて日本を目指します。</p>
+        </header>
+
+        <div class="cards4">
+          <article class="tcard" data-reveal data-delay="0">
+            <span class="tcard__kanji" aria-hidden="true">語</span>
+            <h3><span class="en">Japanese ability, proven by exams</span><span class="ja">試験で証明する日本語力</span></h3>
+            <p class="en">Students study script, vocabulary, grammar and listening step by step, aiming to pass JLPT N5 / N4 and JFT-Basic.</p>
+            <p class="ja">JLPT N5・N4、JFT-Basic の合格を目標に、文字・語彙・文法・聴解を体系的に学習します。</p>
+          </article>
+          <article class="tcard" data-reveal data-delay="1">
+            <span class="tcard__kanji" aria-hidden="true">話</span>
+            <h3><span class="en">Conversation that works on site</span><span class="ja">現場で通じる会話力</span></h3>
+            <p class="en">Our spoken-Japanese course drills the exchanges that matter every day at work: greeting, reporting, asking and confirming.</p>
+            <p class="ja">会話コースで、あいさつ・報告・質問・確認など、日常と職場で必要なやり取りを繰り返し練習します。</p>
+          </article>
+          <article class="tcard" data-reveal data-delay="2">
+            <span class="tcard__kanji" aria-hidden="true">礼</span>
+            <h3><span class="en">Respect for Japanese culture and discipline</span><span class="ja">日本の文化と規律への理解</span></h3>
+            <p class="en">Punctuality, courtesy, teamwork. Japanese culture, discipline and values are part of how we teach every class.</p>
+            <p class="ja">時間厳守、礼儀、チームワーク。日本の文化・規律・価値観を、日々の授業の中で伝えています。</p>
+          </article>
+          <article class="tcard" data-reveal data-delay="3">
+            <span class="tcard__kanji" aria-hidden="true">証</span>
+            <h3><span class="en">Visa support from start to finish</span><span class="ja">ビザ手続きまで一貫サポート</span></h3>
+            <p class="en">We provide consultancy for SSW, student and engineer visas, guiding each student from paperwork to departure.</p>
+            <p class="ja">特定技能・留学・技術ビザのコンサルティングを行い、書類準備から渡航まで伴走します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="block block--about" id="about">
+      <div class="container">
+        <h2 class="banner" data-reveal>
+          <span class="en">About Misaki Japanese Academy</span>
+          <span class="ja">ミサキ日本語アカデミーについて</span>
+        </h2>
+        <div class="card card--about" data-reveal>
+          <p class="en">Misaki Japanese Academy is a Japanese language education and career preparation institute based in Ambalangoda, Sri Lanka.</p>
+          <p class="ja">ミサキ日本語アカデミーは、スリランカ・アンバランゴダを拠点とする日本語教育・キャリア準備機関です。</p>
+          <p class="en">Our academy is dedicated to providing quality Japanese language education and practical learning opportunities for students who wish to develop their Japanese language skills and explore future opportunities in Japan.</p>
+          <p class="ja">日本語力を伸ばし、日本での将来の可能性を広げたい学生のために、質の高い日本語教育と実践的な学びの機会を提供しています。</p>
+          <p class="en">We focus on Japanese language proficiency, examination preparation, cultural understanding and career-oriented guidance.</p>
+          <p class="ja">日本語能力の向上、試験対策、文化理解、そしてキャリアを見据えた指導に力を入れています。</p>
+          <p class="en">Through experienced teaching, structured learning programmes and student-focused support, we aim to help our students take confident steps towards their future.</p>
+          <p class="ja">経験豊かな指導、体系的な学習プログラム、学生に寄り添うサポートを通じて、一人ひとりが自信を持って未来へ踏み出せるよう支えます。</p>
+          <p class="en">Our goal is to make Japanese language education accessible and meaningful for everyone who dreams of building a future connected with Japan.</p>
+          <p class="ja">私たちの目標は、日本とつながる未来を夢見るすべての人に、身近で意義ある日本語教育を届けることです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FLAGS + MISSION & VISION ============ -->
+    <section class="block block--mission" id="mission">
+      <div class="flags" data-reveal>
+        <img class="flag flag--sl" src="assets/images/flag-sri-lanka.png" width="298" height="430" alt="Flag of Sri Lanka">
+        <img class="flags__logo" src="assets/images/logo-round.png" width="180" height="180" alt="Misaki Japanese Academy">
+        <img class="flag flag--jp" src="assets/images/flag-japan.png" width="640" height="587" alt="Flag of Japan">
+      </div>
+      <div class="container mv">
+        <article class="mv__card" data-reveal data-delay="0">
+          <p class="mv__tag"><span class="mv__kanji">使命</span><span>Mission</span></p>
+          <h3 class="en">To build the ability and confidence to study and work in Japan through practical, high-quality Japanese education.</h3>
+          <h3 class="ja">実践的で質の高い日本語教育を通じて、日本で学び、働くための力と自信を育てます。</h3>
+          <ul class="ticks">
+            <li><span class="en">Practical, effective Japanese teaching</span><span class="ja">実践的で効果的な日本語教育</span></li>
+            <li><span class="en">Preparation for JLPT and JFT examinations</span><span class="ja">JLPT・JFT の試験対策</span></li>
+            <li><span class="en">Real communication skills</span><span class="ja">伝わるコミュニケーション力の育成</span></li>
+            <li><span class="en">Japanese culture, discipline and values</span><span class="ja">日本の文化・規律・価値観の理解</span></li>
+            <li><span class="en">Support through the whole journey</span><span class="ja">学習から渡航までの継続サポート</span></li>
+          </ul>
+        </article>
+
+        <article class="mv__card mv__card--vision" data-reveal data-delay="1">
+          <svg class="enso" viewBox="0 0 200 200" aria-hidden="true">
+            <path d="M150 38 C 108 8, 40 30, 28 92 C 16 156, 78 190, 130 172 C 178 156, 192 96, 164 60" pathLength="1"/>
+          </svg>
+          <p class="mv__tag"><span class="mv__kanji">展望</span><span>Vision</span></p>
+          <h3 class="en">To be a trusted Japanese-language institution linking Sri Lanka and Japan.</h3>
+          <h3 class="ja">スリランカと日本をつなぐ、信頼される日本語教育機関へ。</h3>
+          <p class="en">We aim to send out people who combine language skills with character, and to contribute to the future of both countries.</p>
+          <p class="ja">語学力と人間力を兼ね備えた人材を送り出し、両国の未来に貢献することを目指しています。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ COURSES ============ -->
+    <section class="block block--courses" id="courses">
+      <div class="container">
+        <img class="deco deco--map" src="assets/images/japan-map.png" width="318" height="450" alt="" aria-hidden="true">
+        <h2 class="banner banner--caps" data-reveal>
+          <span class="en">Courses</span><span class="ja">コース</span>
+        </h2>
+        <div class="card card--courses" data-reveal>
+          <div class="courses">
+            <article class="course">
+              <h3 class="course__title"><span class="en">JLPT N5 –<br>Beginner Japanese</span><span class="ja">JLPT N5<br>入門日本語</span></h3>
+              <p class="course__body"><span class="en">Japanese language basics, Hiragana, Katakana, vocabulary, grammar, reading and listening.</span><span class="ja">日本語の基礎、ひらがな・カタカナ、語彙、文法、読解、聴解。</span></p>
+            </article>
+            <article class="course">
+              <h3 class="course__title"><span class="en">JLPT N4 –<br>Elementary Japanese</span><span class="ja">JLPT N4<br>初級日本語</span></h3>
+              <p class="course__body"><span class="en">Improve Japanese communication, grammar, vocabulary and reading skills.</span><span class="ja">日本語でのコミュニケーション、文法、語彙、読解力を伸ばします。</span></p>
+            </article>
+            <article class="course">
+              <h3 class="course__title"><span class="en">JFT –<br>Basic Preparation</span><span class="ja">JFT-Basic<br>試験対策</span></h3>
+              <p class="course__body"><span class="en">Practical Japanese communication and examination preparation for students interested in the SSW pathway.</span><span class="ja">特定技能を目指す学生のための、実践的な日本語と試験対策。</span></p>
+            </article>
+            <article class="course">
+              <h3 class="course__title"><span class="en">SSW Japanese<br>Language Programme</span><span class="ja">特定技能<br>日本語プログラム</span></h3>
+              <p class="course__body"><span class="en">Japanese language, workplace communication, mock examinations and interview preparation.</span><span class="ja">日本語、職場でのコミュニケーション、模擬試験、面接対策。</span></p>
+            </article>
+            <article class="course">
+              <h3 class="course__title"><span class="en">Spoken<br>Japanese</span><span class="ja">日本語<br>会話</span></h3>
+              <p class="course__body"><span class="en">Develop speaking, listening and everyday communication skills.</span><span class="ja">話す・聞く力と、日常のコミュニケーション力を養います。</span></p>
+            </article>
+            <article class="course">
+              <h3 class="course__title"><span class="en">Japanese Student Visa<br>Preparation</span><span class="ja">留学ビザ<br>準備</span></h3>
+              <p class="course__body"><span class="en">Japanese language preparation and guidance for students interested in studying in Japan.</span><span class="ja">日本留学を希望する学生のための日本語準備と進路ガイダンス。</span></p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- video in a red frame -->
+      <div class="vframe" data-reveal>
+        <div class="vframe__inner">
+          <video id="visaVideo" src="assets/video/misaki-visa.mp4" poster="assets/images/video-poster.jpg" preload="none" playsinline controls
+                 aria-label="Misaki Japanese Academy: working visa, student visa, SSW visa"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEACHERS ============ -->
+    <section class="block" id="teachers">
+      <div class="container">
+        <h2 class="banner banner--caps" data-reveal>
+          <span class="en">Teachers</span><span class="ja">講師紹介</span>
+        </h2>
+        <div class="card card--teachers" data-reveal>
+          <div class="teachers">
+            <figure class="teacher">
+              <div class="teacher__photo">
+                <img src="assets/images/sensei-shamini.jpg" width="1000" height="817" alt="Shamini Sensei" loading="lazy">
+              </div>
+              <figcaption class="teacher__name">Shamini Sensei</figcaption>
+            </figure>
+
+            <div class="teacher teacher--profile">
+              <div class="teacher__photo teacher__photo--outline">
+                <ul class="teacher__facts">
+                  <li><span class="en">JLPT N1 holder</span><span class="ja">日本語能力試験 N1 取得</span></li>
+                  <li><span class="en">Studied and graduated in Nagoya, Japan</span><span class="ja">日本・名古屋で留学、卒業</span></li>
+                  <li><span class="en">Japanese translator and visiting lecturer</span><span class="ja">日本語翻訳者・客員講師</span></li>
+                  <li><span class="en">Teaches JLPT, NAT, O/L and A/L Japanese</span><span class="ja">JLPT・NAT・O/L・A/L の日本語を指導</span></li>
+                  <li><span class="en">213K+ followers on Facebook</span><span class="ja">Facebook フォロワー 21万人以上</span></li>
+                </ul>
+                <p class="teacher__links">
+                  <a href="https://www.facebook.com/tsubaki.shamini" target="_blank" rel="noopener">Facebook</a>
+                  <a href="https://www.tiktok.com/@shamini.sensei" target="_blank" rel="noopener">TikTok</a>
+                  <a href="https://youtube.com/@shaminiliyanaarachchi-7756" target="_blank" rel="noopener">YouTube</a>
+                </p>
+              </div>
+              <p class="teacher__name"><span class="en">Sensei's Profile</span><span class="ja">先生のプロフィール</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="block" id="services">
+      <div class="container">
+        <h2 class="banner banner--caps" data-reveal>
+          <span class="en">Services</span><span class="ja">サービス</span>
+        </h2>
+        <div class="card card--services" data-reveal>
+          <p class="en">At Misaki Japanese Academy, we provide educational and career preparation services designed to support students at every stage of their Japanese language journey.</p>
+          <p class="ja">ミサキ日本語アカデミーでは、日本語学習のあらゆる段階で学生を支える、教育とキャリア準備のサービスを提供しています。</p>
+
+          <h3 class="service__title"><span class="en">1. Japanese Language Education</span><span class="ja">1. 日本語教育</span></h3>
+          <p class="en">Structured Japanese language programmes from beginner to elementary levels.</p>
+          <p class="ja">入門から初級まで、体系的な日本語プログラム。</p>
+
+          <h3 class="service__title"><span class="en">2. JLPT Examination Preparation</span><span class="ja">2. JLPT 試験対策</span></h3>
+          <p class="en">Focused preparation for Japanese Language Proficiency Test examinations.</p>
+          <p class="ja">日本語能力試験に向けた集中対策。</p>
+
+          <h3 class="service__title"><span class="en">3. JFT-Basic Examination Preparation</span><span class="ja">3. JFT-Basic 試験対策</span></h3>
+          <p class="en">Practical language training and mock examinations for JFT-Basic candidates.</p>
+          <p class="ja">JFT-Basic 受験者のための実践的な語学トレーニングと模擬試験。</p>
+
+          <h3 class="service__title"><span class="en">4. SSW Career Preparation</span><span class="ja">4. 特定技能キャリア準備</span></h3>
+          <p class="en">Japanese language training, industry-related preparation and interview practice for students interested in Japan's Specified Skilled Worker programme.</p>
+          <p class="ja">特定技能制度を目指す学生への日本語指導、業種別の準備、面接練習。</p>
+
+          <p class="more-wrap"><a class="more" href="#contact"><span class="en">Explore More</span><span class="ja">もっと見る</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process">
+      <span class="wm wm--left" aria-hidden="true" data-parallax="0.1">流れ</span>
+      <div class="container process__grid">
+        <div class="process__side">
+          <header class="head head--left" data-reveal>
+            <p class="kicker"><span class="kicker__no">02</span><span class="kicker__jp">流れ</span><span class="kicker__en">Process</span></p>
+            <h2 class="title">
+              <span class="en">From first contact to first day at work</span>
+              <span class="ja">ご相談から就業開始まで</span>
+            </h2>
+            <p class="sub en">Five clear steps. You can meet candidates online before making any decision.</p>
+            <p class="sub ja">五つのステップで進みます。ご判断の前に、オンラインで候補者と直接お話しいただけます。</p>
+          </header>
+          <figure class="frame frame--tilt" data-reveal>
+            <img src="assets/images/interview-session.jpg" width="727" height="490" loading="lazy"
+                 alt="A classroom session at Misaki connected live to Japan by video call">
+            <figcaption>
+              <span class="en">Our classroom, connected live with Japan</span>
+              <span class="ja">教室と日本をオンラインでつなぐ</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <ol class="timeline" id="timeline">
+          <li class="step">
+            <span class="step__no">一</span>
+            <div>
+              <h3><span class="en">Consultation</span><span class="ja">ご相談</span></h3>
+              <p class="en">Tell us the role, the number of people and the Japanese level you need.</p>
+              <p class="ja">募集職種・人数・求める日本語レベルなど、ご要望をお聞かせください。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__no">二</span>
+            <div>
+              <h3><span class="en">Candidate introduction</span><span class="ja">候補者のご紹介</span></h3>
+              <p class="en">We introduce students whose level, character and goals match your requirements.</p>
+              <p class="ja">日本語レベル・人柄・目標がご要望に合う学生をご紹介します。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__no">三</span>
+            <div>
+              <h3><span class="en">Online interview</span><span class="ja">オンライン面接</span></h3>
+              <p class="en">Meet candidates face to face over video, connected live from our classroom in Ambalangoda.</p>
+              <p class="ja">アンバランゴダの教室と御社をビデオ通話でつなぎ、候補者と直接お話しいただけます。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__no">四</span>
+            <div>
+              <h3><span class="en">Visa and documents</span><span class="ja">ビザ・書類準備</span></h3>
+              <p class="en">The academy supports the visa process on the student's side: SSW, student or engineer.</p>
+              <p class="ja">特定技能・留学・技術ビザなど、学生側の手続きを学院がサポートします。</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__no">五</span>
+            <div>
+              <h3><span class="en">Arrival and start</span><span class="ja">来日・就業開始</span></h3>
+              <p class="en">Students keep studying Japanese right up to departure, and arrive prepared.</p>
+              <p class="ja">出発の日まで日本語学習を継続。しっかり準備を整えて日本へ向かいます。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="block block--gallery" id="gallery">
+      <div class="container">
+        <h2 class="banner banner--caps" data-reveal>
+          <span class="en">Gallery</span><span class="ja">ギャラリー</span>
+        </h2>
+        <div class="card card--gallery" data-reveal>
+          <!-- three tiles; each one changes photo on its own (see js/main.js) -->
+          <div class="g3" id="g3">
+            <button type="button" class="gitem" data-dir="right" data-full="assets/images/gallery-01-students.jpg"
+                    data-cap-en="Students in class at Misaki" data-cap-ja="ミサキの教室で学ぶ学生たち"
+                    data-photos='[{"src": "assets/images/gallery-01-students.jpg", "en": "Students in class at Misaki", "ja": "ミサキの教室で学ぶ学生たち"}, {"src": "assets/images/gallery-04-classroom.jpg", "en": "A full classroom", "ja": "満席の教室"}, {"src": "assets/images/gallery-06-song-lesson.jpg", "en": "Learning Japanese through song", "ja": "歌で学ぶ日本語"}]'>
+              <img src="assets/images/gallery-01-students.jpg" loading="lazy" alt="Students in class at Misaki">
+            </button>
+            <button type="button" class="gitem" data-dir="up" data-full="assets/images/gallery-02-online-class.jpg"
+                    data-cap-en="A class connected live with Japan" data-cap-ja="日本とオンラインでつながる授業"
+                    data-photos='[{"src": "assets/images/gallery-02-online-class.jpg", "en": "A class connected live with Japan", "ja": "日本とオンラインでつながる授業"}, {"src": "assets/images/gallery-08-airport.jpg", "en": "Arrival in Japan", "ja": "日本に到着"}, {"src": "assets/images/gallery-09-teacher.jpg", "en": "Welcome to Misaki", "ja": "ミサキへようこそ", "pos": "50% 12%"}]'>
+              <img src="assets/images/gallery-02-online-class.jpg" loading="lazy" alt="A class connected live with Japan">
+            </button>
+            <button type="button" class="gitem" data-dir="left" data-full="assets/images/gallery-03-japan-visit.jpg"
+                    data-cap-en="Our ties with Japan" data-cap-ja="日本とのつながり"
+                    data-photos='[{"src": "assets/images/gallery-03-japan-visit.jpg", "en": "Our ties with Japan", "ja": "日本とのつながり"}, {"src": "assets/images/gallery-05-lesson.jpg", "en": "Lesson time", "ja": "授業の様子"}, {"src": "assets/images/gallery-07-certificate.jpg", "en": "Documents handed over", "ja": "書類の受け渡し"}]'>
+              <img src="assets/images/gallery-03-japan-visit.jpg" loading="lazy" alt="Our ties with Japan">
+            </button>
+          </div>
+
+          <div class="gmore" id="gmore" hidden>
+            <button type="button" class="gitem" data-full="assets/images/gallery-04-classroom.jpg"
+                    data-cap-en="A full classroom" data-cap-ja="満席の教室">
+              <img src="assets/images/gallery-04-classroom.jpg" loading="lazy" alt="A full classroom at Misaki Japanese Academy">
+            </button>
+            <button type="button" class="gitem" data-full="assets/images/gallery-05-lesson.jpg"
+                    data-cap-en="Lesson time" data-cap-ja="授業の様子">
+              <img src="assets/images/gallery-05-lesson.jpg" loading="lazy" alt="A lesson at Misaki Japanese Academy">
+            </button>
+            <button type="button" class="gitem" data-full="assets/images/gallery-06-song-lesson.jpg"
+                    data-cap-en="Learning Japanese through song" data-cap-ja="歌で学ぶ日本語">
+              <img src="assets/images/gallery-06-song-lesson.jpg" loading="lazy" alt="Students learning a Japanese song">
+            </button>
+            <button type="button" class="gitem" data-full="assets/images/gallery-07-certificate.jpg"
+                    data-cap-en="Documents handed over" data-cap-ja="書類の受け渡し">
+              <img src="assets/images/gallery-07-certificate.jpg" loading="lazy" alt="A student receiving documents">
+            </button>
+            <button type="button" class="gitem" data-full="assets/images/gallery-08-airport.jpg"
+                    data-cap-en="Arrival in Japan" data-cap-ja="日本に到着">
+              <img src="assets/images/gallery-08-airport.jpg" loading="lazy" alt="Arrival at an airport in Japan">
+            </button>
+            <button type="button" class="gitem gitem--top" data-full="assets/images/gallery-09-teacher.jpg"
+                    data-cap-en="Welcome to Misaki" data-cap-ja="ミサキへようこそ">
+              <img src="assets/images/gallery-09-teacher.jpg" loading="lazy" alt="A teacher in front of the Misaki sign">
+            </button>
+          </div>
+
+          <p class="more-wrap">
+            <button type="button" class="more" id="gmoreBtn" aria-expanded="false" aria-controls="gmore">
+              <span class="more__open"><span class="en">Explore More</span><span class="ja">もっと見る</span></span>
+              <span class="more__close"><span class="en">Show Less</span><span class="ja">閉じる</span></span>
+            </button>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <img class="footer__map footer__map--l" src="assets/images/japan-map.png" alt="" aria-hidden="true">
+    <img class="footer__map footer__map--r" src="assets/images/japan-map.png" alt="" aria-hidden="true">
+
+    <div class="footer__logo">
+      <span class="tlogo tlogo--footer" role="img" aria-label="Misaki Japanese Academy">
+        <span class="tlogo__word">MI<span class="tlogo__sun">SA</span>KI</span>
+        <span class="tlogo__band">JAPANESE ACADEMY</span>
+      </span>
+    </div>
+
+    <p class="footer__script">
+      <span class="en">Join Misaki Japanese Academy and take your first step towards your future.</span>
+      <span class="ja">ミサキ日本語アカデミーで、未来への第一歩を。</span>
+    </p>
+
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h2 class="footer__label"><span class="en">Contact Info</span><span class="ja">連絡先</span></h2>
+        <p><b><span class="en">Address:</span><span class="ja">所在地：</span></b><br>96-J, A Zone Building, Galle Road,<br>Ambalangoda, Sri Lanka.</p>
+        <p><b><span class="en">Contact Numbers:</span><span class="ja">電話番号：</span></b><br>
+          <a href="tel:+94717898057">+94 71 789 8057</a><br>
+          <a href="tel:+817045348857">+81 70 4534 8857</a></p>
+        <p><b><span class="en">E-Mail:</span><span class="ja">メール：</span></b><br>
+          <a href="mailto:misakijapaneseacademy@gmail.com">misakijapaneseacademy@gmail.com</a></p>
+      </div>
+
+      <div class="footer__col footer__col--center">
+        <h2 class="footer__label"><span class="en">Quick Links</span><span class="ja">リンク</span></h2>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#top"><span class="en">Home</span><span class="ja">ホーム</span></a>
+          <a href="#about"><span class="en">About</span><span class="ja">学院について</span></a>
+          <a href="#mission"><span class="en">Mission &amp; Vision</span><span class="ja">使命と展望</span></a>
+          <a href="#courses"><span class="en">Courses</span><span class="ja">コース</span></a>
+          <a href="#services"><span class="en">Our Services</span><span class="ja">サービス</span></a>
+          <a href="#gallery"><span class="en">Gallery</span><span class="ja">ギャラリー</span></a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--right">
+        <h2 class="footer__label"><span class="en">Follow Us</span><span class="ja">フォロー</span></h2>
+        <p><b>Facebook:</b><br>
+          <a href="https://www.facebook.com/share/1DA5dj9xgE/?mibextid=wwXIfr" target="_blank" rel="noopener">https://www.facebook.com/share/1DA5dj9xgE/?mibextid=wwXIfr</a><br>
+          <a href="https://www.facebook.com/profile.php?id=61584600341818" target="_blank" rel="noopener">Misaki Japanese Academy · Ambalangoda</a><br>
+          <a href="https://www.facebook.com/tsubaki.shamini" target="_blank" rel="noopener">Shamini Sensei</a></p>
+        <img class="footer__seal" src="assets/images/logo-round.png" width="180" height="180" alt="Misaki Japanese Academy">
+      </div>
+    </div>
+
+    <p class="footer__base">© <span id="year">2026</span> Misaki Japanese Academy · ミサキ日本語アカデミー</p>
+  </footer>
+
+  <a class="totop" href="#top" id="totop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo" hidden>
+    <button type="button" class="lightbox__close" data-lb="close" aria-label="Close">×</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Previous">‹</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button type="button" class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Next">›</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
